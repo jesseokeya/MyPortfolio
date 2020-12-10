@@ -1,6 +1,5 @@
 import React, {useEffect, useState} from 'react'
 import sanityClient from '../client.js'
-import {Link} from 'react-router-dom'
 
 
 export default function Project() {
@@ -29,14 +28,15 @@ export default function Project() {
                 <h2 className = "text-lg text-gray-600 flex justify-center mb-12">
                     My projects page 
                 </h2>
-                    <section className=" grid grid-cols-2 gap-8"> 
+                    <section className=" grid grid-cols-2 gap-8 "> 
                         { projectData && projectData.map((project,index) =>(
-                            <article className = "relative rounded-lg shadow-xl bg-white p-16">
+                            <article className = "relative rounded-lg shadow-xl bg-yellow-300 p-16">
                             <h3 className = "text-gray-800 text-3xl font bold mb-2 hover: text-yellow-700">
                                 <a href = {project.link}
-                                alt = {project.title}
-                                target = "_blank"
-                                rel = "noopener noreferrer">{projectData.title}</a>
+                                    alt = {project.title}
+                                    target = "_blank"
+                                    rel = "noopener noreferrer">{projectData.title}
+                                </a>
                             </h3>
                             <div className = "text-gray-500 text-xs space-x-4">
                                 <span>
@@ -49,14 +49,16 @@ export default function Project() {
                                 <strong className = "font-bold"> Company</strong>:{" "}
                                     {project.place}
                                 <strong className = "font-bold"> Type</strong>:{" "}
-                                {project.projectType}
+                                    {project.projectType}
                                 <p className="my-6 text-lg text-gray-700 leading-relaxed">{project.description}</p>
                                 <a href = {project.link}
-                                rel = "noopener noreferrer"
-                                target = "_blank"
-                                className = "text-red-500 font-bold hover:underline howver:text-red-400">
+                                    rel = "noopener noreferrer"
+                                    target = "_blank"
+                                    className = "text-red-500 font-bold hover:underline howver:text-red-400">
                                     View the Project{" "}
-                                    <span role="img" aria-label="right pointer">👉🏽</span>
+                                    <span role="img" aria-label="right pointer">
+                                        😊
+                                    </span>
                                 </a>
                             </div>
                             </article>
