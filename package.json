@@ -18,8 +18,9 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "build": "react-scripts build",
+    "build": "npm run build:css && react-scripts build",
     "test": "react-scripts test",
+    "build:css": "postcss src/styles/tailwind.css -o src/styles/main.css",
     "eject": "react-scripts eject"
   },
   "eslintConfig": {
