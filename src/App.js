@@ -5,7 +5,7 @@ import SinglePost from './components/SinglePost'
 import Post from './components/Post'
 import Project from './components/Project'
 import NavBar from './components/NavBar'
-import "tailwindcss/tailwind.css"
+import './index.css';
 
 function App() {
   return (
